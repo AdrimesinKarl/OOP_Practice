@@ -1,7 +1,7 @@
 <?php
 
-    class Book{
-        
+    class Book{ // this is a template for objects, and an instance of a class
+
         // Properties
         public $title;
         public $author;
@@ -36,17 +36,16 @@
 
     }
 
-    // Create a new Book object and set its properties
-    $title = new Book();
-    $author = new Book();
-    $year = new Book();
-    $title->set_title("The Great Gatsby");
-    $author->set_author("F. Scott Fitzgerald");
-    $year->set_year(1995);
+    // Create a new Book object and set its properties...Class is nothing without an object
+    $Book1 = new Book();
 
-    echo $title->get_title() . "<br>";
-    echo $author->get_author() . "<br>";
-    echo $year->get_year() . "<br>";
+    $Book1->set_title("The Great Gatsby");
+    $Book1->set_author("F. Scott Fitzgerald");
+    $Book1->set_year(1995);
+
+    echo $Book1->get_title() . "<br>";
+    echo $Book1->get_author() . "<br>";
+    echo $Book1->get_year() . "<br>";
 
 
 

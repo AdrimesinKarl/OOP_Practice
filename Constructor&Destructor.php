@@ -1,15 +1,21 @@
 <?php
 
-class Book { 
+class Book {
     public $title;
     public $author;
     public $year;
 
 
     function __construct($title, $author, $year) { //constructor this is a special method that is called when an object is created
-        $this->title = $title;
-        $this->author = $author;
+        $this->title = $title; // $this refers to the current object
+        $this->author = $author; // Assigning the values to the object's properties or Initializing the properties
         $this->year = $year;
+    }
+
+    function __destruct() { //destructor this is a special method that is called when an object is destroyed or the script ends
+                            // This method is called when the object is destroyed
+                            // It can be used to perform cleanup tasks, such as closing database connections or releasing resources
+        echo "The book ' {$this->title} ' by {$this->author} was published in {$this->year} . <br>";
     }
 
         
@@ -34,6 +40,7 @@ class Book {
     echo "<br>" . $book1->get_title();
     echo "<br>" . $book2->get_author();
     echo "<br>" . $book3->get_year();
+
 
 
 
