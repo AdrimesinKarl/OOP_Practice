@@ -5,7 +5,7 @@ class Book {
     public $author;
     public $year;
 
-    function __construct($title, $author, $year) {
+    public function __construct($title, $author, $year) {
     $this->title = $title;
     $this->author = $author;
     $this->year = $year;
